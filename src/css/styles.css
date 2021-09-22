@@ -21,15 +21,15 @@
 }
 @font-face {
   font-family: "TTFirsNeue";
-  src: url("../fonts/TTFirsNeue-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/TTFirsNeue-Medium.woff") format("woff");
+  font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "TTFirsNeue";
-  src: url("../fonts/TTFirsNeue-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/TTFirsNeue-Regular.woff") format("woff");
+  font-weight: 400;
   font-display: swap;
   font-style: normal;
 }

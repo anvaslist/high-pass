@@ -161,6 +161,9 @@ const images = () => {
     // .pipe(tinypng({
     //   key: 'BKcgq6YDxMn86Hxx2mDX90BCqGbzk0H3',
     // }))
+    .pipe(tinypng({
+      key: '79Nfsxzlv5DRDMRcFcpX61pYDFx6xHCC',
+    }))
     .pipe(dest('dist/img'))
 }
 
