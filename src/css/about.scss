@@ -1,0 +1,132 @@
+.about {
+  padding-top: 30px;
+  // padding-bottom: 69px;
+  @include adaptiveValue("padding-bottom", 69, 132, 1920, 1025, 0);
+  background-color: $drk;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, calc(50% - 15px));
+    justify-content: space-between;
+  }
+  &__title {
+    grid-column: span 2;
+    margin-bottom: 2px;
+  }
+  &__img {
+    margin-bottom: 25px;
+    img {
+      max-width: 100%;
+    }
+  }
+  &__form {
+    display: flex;
+  }
+  &__caption {
+    display: block;
+    margin-bottom: 16px;
+  }
+  &__label {
+    position: relative;
+    margin-right: 30px;
+    flex-grow: 1;
+  }
+  &__hint {
+    position: absolute;
+    display: none;
+    top: 3px;
+    left: 23px;
+    font-family: $fontRob;
+    font-size: 9px;
+    line-height: 11px;
+    color: #f06666;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    &_active {
+      animation: showElem 0.2s ease-in-out;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__inp,
+  &__inp::placeholder {
+    color: #e6dede;
+  }
+  &__inp {
+    width: 100%;
+    background-color: #4A4A4A;
+    outline: none;
+  }
+  &__btn {
+    align-self: flex-start;
+    background-color: $orng;
+  }
+  &__btn:hover {
+    background-color: $orngFcs;
+    outline: 3px solid $orngFcs;
+  }
+  &__btn:focus {
+    background-color: $orng;
+  }
+  &__btn:focus,
+  &__btn:active {
+    outline: 3px solid $orngActv;
+  }
+  &__btn:active {
+    background-color: $orngActv;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    @include adaptiveValue("padding-bottom", 143, 49, 1024, 768, 0);
+    &__form {
+      flex-direction: column;
+    }
+    &__label {
+      margin-right: 0;
+      margin-bottom: 20px;
+      // padding-right: 124px;
+      width: 73.3906%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding-bottom: 65px;
+    &__label {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding-bottom: 60px;
+    &__container {
+      grid-template-columns: 1fr;
+      column-gap: 0px;
+      row-gap: 2px;
+    }
+    &__title {
+      grid-column: 1 / 2;
+      margin-bottom: 6px;
+    }
+    &__img {
+      img {
+        max-width: none;
+        width: 100%;
+      }
+    }
+    &__left {
+      margin-bottom: 18px;
+    }
+    &__caption {
+      margin-bottom: 14px;
+    }
+    &__label {
+      width: 100%;
+    }
+  }
+}

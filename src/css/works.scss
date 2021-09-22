@@ -1,0 +1,152 @@
+.works {
+  padding-top: 16px;
+  padding-bottom: 40px;
+  &__container,
+  &__list {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__event {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    padding-top: 411px;
+    @include adaptiveValue("padding-right", 145, 11, 1920, 1024, 0);
+    @include adaptiveValue("padding-bottom", 60, 30, 1920, 1024, 0);
+    @include adaptiveValue("padding-left", 60, 30, 1920, 1024, 0);
+    background: url(../img/works/works__event.jpg) center / cover no-repeat;
+  }
+  &__hashtag {
+    align-self: flex-start;
+  }
+  &__hashtag {
+    top: 15px;
+    right: 15px;
+  }
+  &__organizer {
+    font-family: $fontRob;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 3px;
+  }
+  &__title {
+    font-family: $fontTT;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 37px;
+    margin-bottom: 19px;
+  }
+  &__item_one {
+    grid-column: span 2;
+  }
+  &__heading {
+    font-family: $fontTT;
+    font-size: 24px;
+    line-height: 25px;
+    color: $drk;
+    margin-bottom: 25px;
+  }
+  &__example {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1352px) {
+  .works {
+    &__event {
+      @include adaptiveValue("padding-top", 405, 315, 1352, 1024, 0);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .works {
+    &__event {
+      background: url(../img/works/works__event_1024.jpg) center / cover
+        no-repeat;
+      @include adaptiveValue("padding-top", 428, 280, 1024, 768, 0);
+      padding-left: 30px;
+      padding-bottom: 30px;
+    }
+    &__organizer {
+      margin-bottom: 8px;
+    }
+    &__title {
+      font-size: 34px;
+      line-height: 34px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .works {
+    padding-top: 19px;
+    &__event {
+      background: url(../img/works/works__event_768.jpg) center / cover
+        no-repeat;
+      @include adaptiveValue("padding-top", 226, 115, 768, 576, 0);
+      @include adaptiveValue("padding-right", 73, 30, 768, 576, 0);
+    }
+    &__organizer {
+      margin-bottom: 14px;
+    }
+    &__title {
+      margin-bottom: 23px;
+      line-height: 31px;
+    }
+    &__heading {
+      font-size: 22px;
+      line-height: 23px;
+      margin-bottom: 17px;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .works {
+    &__container {
+      grid-template-columns: 1fr;
+      row-gap: 34px;
+    }
+    &__example {
+      img {
+        max-width: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .works {
+    padding-top: 20px;
+    // &__container {
+    //   grid-template-columns: 1fr;
+    //   row-gap: 34px;
+    // }
+    &__event {
+      background: url(../img/works/works__event_320.jpg) center / cover
+        no-repeat;
+      padding-top: 234px;
+      padding-right: 30px;
+    }
+    &__organizer {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 10px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 14px;
+    }
+    &__heading {
+      font-size: 18px;
+      line-height: 19px;
+    }
+  }
+}
