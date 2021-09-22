@@ -5,7 +5,7 @@
 **_Стек:_**
 
 - HTML
-- CSS
+- SCSS
 - Чистый JavaScript
 - Gulp
 - Swiper JS
