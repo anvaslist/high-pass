@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setTransitionendListenter(burger, 'burger_active', 'block');
 
-  // реализация плавного скролла
+  // плавный скролла
   const anchors = document.querySelectorAll('a[href*="#"]');
 
   function setSmoothScroll(target, duration) {
