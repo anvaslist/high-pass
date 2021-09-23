@@ -139,9 +139,6 @@ const images = () => {
     'src/img/**/*.png',
     'src/img/**/*.jpeg',
   ])
-    .pipe(tinypng({
-      key: '79Nfsxzlv5DRDMRcFcpX61pYDFx6xHCC',
-    }))
     .pipe(dest('dist/img'))
     .pipe(browserSync.stream())
 }
