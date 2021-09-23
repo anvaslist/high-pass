@@ -1,4 +1,4 @@
-const { src, dest, series, watch } = require('gulp');
+const { src, dest, parallel, series, watch } = require('gulp');
 const concat = require('gulp-concat');
 const htmlMin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
@@ -10,23 +10,18 @@ const babel = require('gulp-babel');
 const notify = require('gulp-notify');
 const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
-// const gulpIf = require('gulp-if');
-// const argv = require('yargs').argv;
 const webp = require('gulp-webp');
 const ttfToWoff = require('gulp-ttf2woff');
 const ttfToWoff2 = require('gulp-ttf2woff2');
 const fs = require('fs');
 const rename = require('gulp-rename');
 const tinypng = require('gulp-tinypng-compress');
-const imageminWebp = require('imagemin-webp');
-const webpHtml = require('gulp-webp-html');
-const fileInclude = require('gulp-file-include');
-const scss = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 const groupMedia = require('gulp-group-css-media-queries');
 
 // DEV
 const clean = () => {
-  return del(['dist'])
+  return del(['dist/*'])
 }
 
 const fonts = () => {
@@ -40,7 +35,7 @@ const fonts = () => {
 
 const cb = () => { }
 
-let srcFonts = 'src/css/fonts.scss';
+let srcFonts = 'src/scss/fonts.scss';
 let appFonts = 'dist/fonts';
 
 const fontsStyle = (done) => {
@@ -65,22 +60,23 @@ const fontsStyle = (done) => {
 }
 
 const styles = () => {
-  return src('src/css/**/*.css')
-    // .pipe(gulpIf(argv.prod, sourcemaps.init()))
-    .pipe(concat('style.css'))
+  return src('src/scss/style.scss')
+    .pipe(sass({
+      outputStyle: 'expanded',
+    }).on('error', notify.onError()))
     .pipe(groupMedia())
     .pipe(autoprefixer({
       cascade: false,
       grid: true,
       flexbox: true,
     }))
-    // .pipe(gulpIf(argv.prod, cleanCSS({
-    //   level: 2,
-    // })))
-    // .pipe(gulpIf(argv.prod, rename({
-    //   suffix: '.min'
-    // })))
-    // .pipe(gulpIf(argv.prod, sourcemaps.write()))
+    .pipe(dest('dist/css'))
+    .pipe(cleanCSS({
+      level: 2,
+    }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(dest('dist/css'))
     .pipe(browserSync.stream())
 };
@@ -90,14 +86,8 @@ const resources = () => {
     .pipe(dest('dist'))
 }
 
-const htmlMinify = () => {
+const html = () => {
   return src('src/**/*.html')
-    // .pipe(gulpIf(argv.prod, htmlMin({
-    //   collapseWhitespace: true
-    // })))
-    // .pipe(gulpIf(argv.prod, rename({
-    //   suffix: '.min'
-    // })))
     .pipe(dest('dist'))
     .pipe(browserSync.stream())
 }
@@ -112,24 +102,24 @@ const svgSprites = () => {
       }
     }))
     .pipe(dest('dist/img'))
+    .pipe(browserSync.stream())
 }
 
 const scripts = () => {
   return src([
     'src/js/**/*.js',
   ])
-    // .pipe(gulpIf(argv.prod, sourcemaps.init()))
-    // .pipe(gulpIf(argv.prod, babel({
-    //   presets: ['@babel/env']
-    // })))
     .pipe(concat('script.js'))
-    // .pipe(gulpIf(argv.prod, uglify({
-    //   toplevel: true,
-    // }).on('error', notify.onError())))
-    // .pipe(gulpIf(argv.prod, rename({
-    //   suffix: '.min'
-    // })))
-    // .pipe(gulpIf(argv.prod, sourcemaps.write()))
+    .pipe(dest('dist/js'))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(uglify({
+      toplevel: true,
+    }).on('error', notify.onError()))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(dest('dist/js'))
     .pipe(browserSync.stream())
 }
@@ -149,26 +139,12 @@ const images = () => {
     'src/img/**/*.png',
     'src/img/**/*.jpeg',
   ])
-    // .pipe(webp({
-    //   quality: 75,
-    // }))
-    // .pipe(dest('dist/img'))
-    // .pipe(src([
-    //   'src/img/**/*.jpg',
-    //   'src/img/**/*.png',
-    //   'src/img/**/*.jpeg',
-    // ]))
-    // .pipe(tinypng({
-    //   key: 'BKcgq6YDxMn86Hxx2mDX90BCqGbzk0H3',
-    // }))
-    .pipe(tinypng({
-      key: '79Nfsxzlv5DRDMRcFcpX61pYDFx6xHCC',
-    }))
     .pipe(dest('dist/img'))
+    .pipe(browserSync.stream())
 }
 
-watch('src/**/*.html', htmlMinify);
-watch('src/css/**/*.css', styles);
+watch('src/**/*.html', html);
+watch('src/scss/**/*.scss', styles);
 watch('src/js/**/*.js', scripts);
 watch('src/resources/**', resources);
 watch('src/fonts/**/*.ttf', fonts);
@@ -184,28 +160,27 @@ exports.clean = clean;
 exports.fonts = fonts;
 exports.fontsStyle = fontsStyle;
 exports.styles = styles;
-exports.htmlMinify = htmlMinify;
+exports.html = html;
 exports.scripts = scripts;
 exports.images = images;
-exports.default = series(resources, htmlMinify, fonts, scripts, styles, images, svgSprites, fontsStyle, watchFiles);
+exports.default = series(clean, parallel(html, scripts, fonts, resources, images, svgSprites), fontsStyle, styles, watchFiles);
 
 // BUILD
-const htmlMinifyBuild = () => {
+const htmlBuild = () => {
   return src('src/**/*.html')
     .pipe(htmlMin({
       collapseWhitespace: true
     }))
-    // .pipe(rename({
-    //   suffix: '.min'
-    // }))
     .pipe(dest('dist'))
     .pipe(browserSync.stream())
 }
 
 const stylesBuild = () => {
-  return src('src/css/**/*.css')
+  return src('src/scss/style.scss')
     .pipe(sourcemaps.init())
-    .pipe(concat('style.css'))
+    .pipe(sass({
+      outputStyle: 'expanded',
+    }).on('error', notify.onError()))
     .pipe(groupMedia())
     .pipe(autoprefixer({
       cascade: false,
@@ -258,10 +233,14 @@ const imagesBuild = () => {
       'src/img/**/*.png',
       'src/img/**/*.jpeg',
     ]))
-    .pipe(tinypng({
-      key: 'BKcgq6YDxMn86Hxx2mDX90BCqGbzk0H3',
-    }))
+    // .pipe(tinypng({
+    //   key: 'BKcgq6YDxMn86Hxx2mDX90BCqGbzk0H3',
+    // })) bar
+    // .pipe(tinypng({
+    //   key: '79Nfsxzlv5DRDMRcFcpX61pYDFx6xHCC',
+    // })) st
     .pipe(dest('dist/img'))
+    .pipe(browserSync.stream())
 }
 
-exports.build = series(resources, htmlMinifyBuild, fonts, scriptsBuild, stylesBuild, imagesBuild, svgSprites, fontsStyle, watchFiles);
+exports.build = series(clean, parallel(htmlBuild, scriptsBuild, fonts, resources, imagesBuild, svgSprites), fontsStyle, stylesBuild, watchFiles);

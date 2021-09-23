@@ -10,13 +10,11 @@
   <link rel="preload" href="fonts/TTFirsNeue-Bold.woff2" as="font">
   <link rel="preload" href="fonts/TTFirsNeue-Medium.woff2" as="font">
   <link rel="preload" href="fonts/TTFirsNeue-Regular.woff2" as="font">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="shortcut icon" href="img/sprite.svg#icon" type="image/svg">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>High Pass</title>
-  <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
-  <script defer src="js/script.js"></script>
+  <script defer src="js/script.min.js"></script>
 </head>
 
 <body>
@@ -48,8 +46,8 @@
               <a class="menu__link" href="#contacts">Контакты</a>
             </li>
           </ul>
-        </nav>
 
+        </nav>
         <ul class="networks header__networks">
 
           <li class="networks__item">
@@ -200,12 +198,12 @@
     <section class="works">
       <div class="container works__container">
 
-        <div class="works__event">
-          <span class="works__organizer">Мастер-класс от Игоря Робова</span>
+        <article class="works__event">
+          <p class="works__organizer">Мастер-класс от Игоря Робова</p>
           <h2 class="works__title">Неоновый фотосет 2.0 7 июля 20:00</h2>
           <a class="btn btn__entire btn_orange" href="">Узнать больше</a>
           <span class="hashtag works__hashtag">#мастеркласс</span>
-        </div>
+        </article>
 
         <div class="works__examples">
           <h3 class="works__heading">Работы участников предыдущего мастер-класса</h3>
@@ -248,19 +246,18 @@
 
         <h2 class="title about__title">О студии</h2>
 
-        <div class="about__left">
-          <p class="parag about__parag">В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.</p>
-        </div>
+        <p class="parag about__parag">В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.</p>
 
         <div class="about__right">
-          <picture class="about__img">
+          <div class="about__camera"></div>
+          <!-- <picture class="about__img">
             <source srcset="img/about/about__camera.jpg" media="(min-width: 1025px)">
             <source srcset="img/about/about__camera_1024.jpg" media="(min-width: 769px)">
             <source srcset="img/about/about__camera_768.jpg" media="(min-width: 451px)">
             <source srcset="img/about/about__camera_320.jpg" media="(min-width: 320px)">
             <img src="img/about/about__camera.jpg" alt="Изображение фотоаппарата">
-          </picture>
-          <span class="caption about__caption">Подписаться на рассылку</span>
+          </picture> -->
+          <strong class="caption about__caption">Подписаться на рассылку</strong>
           <form class="about__form">
             <label class="about__label">
               <span class="about__hint" aria-label="Подсказка: недопустимый формат почты">Недопустимый формат</span>
@@ -276,385 +273,395 @@
     <section id="projects" class="projects">
       <div class="container projects__container">
 
-        <div class="swiper">
-          <div class="projects__swiper_upper">
-            <h2 class="title projects__title">Наши проекты</h2>
-            <div class="swiper-pagination swiper-pagination_mobile"></div>
-          </div>
+        <div class="projects__swiper_upper">
 
-          <div class="swiper-wrapper projects__swiper-wrapper">
+          <h2 class="title projects__title">Наши проекты</h2>
 
-            <div class="swiper-slide projects__swiper-slide projects__swiper-slide-1">
-
-              <ul class="projects__list projects__list_upper">
-
-                <li class="projects__item projects__item_common">
-
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-1/projects__slide-1.1.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.1_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.1_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-1/projects__slide-1.1.jpg" alt="Проект №1">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Синтетически, смешаны с не уникальными данными до степени...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">16 июня</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#пейзаж</span>
-
-                </li>
-
-                <li class="projects__item projects__item_common">
-
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-1/projects__slide-1.2.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.2_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.2_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-1/projects__slide-1.2.jpg" alt="Проект №2">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">В своём стремлении улучшить опыт мы упускаем, что явные...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">28 мая</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#портрет</span>
-
-                </li>
-
-                <li class="projects__item projects__item_common">
-
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-1/projects__slide-1.3.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.3_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.3_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-1/projects__slide-1.3.jpg" alt="Проект №3">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Равным образом, высокое качество позиционных...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">14 мая</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#предмет</span>
-
-                </li>
-
-                <li class="projects__item 
-                projects__item_common projects__item_common_tablet">
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-2/projects__slide-2.4.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.4_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.4_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-2/projects__slide-2.4.jpg" alt="Проект №1">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Равным образом, сложившаяся структура организации...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">15 февраля</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#пейзаж</span>
-                </li>
-
-                <li class="projects__item projects__item_huge projects__item_huge_desk projects__item_huge_fuji">
-                  <div class="projects__upper">
-                    <div class="date projects__date">
-                      <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                        <use href="img/sprite.svg#calendar" />
-                      </svg>
-                      <span class="date__day">9 апреля</span>
-                    </div>
-                    <h3 class="projects__heading">Cемантический разбор</h3>
-                    <span class="content projects__content">
-                      В рамках спецификации современных стандартов, интерактивные прототипы
-                    </span>
-                  </div>
-                  <a href="" class="btn btn__entire projects__btn">О проекте</a>
-                  <span class="hashtag projects__hashtag">#fuji</span>
-                </li>
-
-              </ul>
-
-              <ul class="projects__list projects__list_lower">
-
-                <li class="projects__item projects__item_huge projects__item_huge_upper projects__item_huge_tablet projects__item_huge_fuji">
-                  <div class="projects__upper">
-                    <div class="date projects__date">
-                      <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                        <use href="img/sprite.svg#calendar" />
-                      </svg>
-                      <span class="date__day">9 апреля</span>
-                    </div>
-                    <h3 class="projects__heading">Cемантический разбор</h3>
-                    <span class="content projects__content">
-                      В рамках спецификации современных стандартов, интерактивные прототипы
-                    </span>
-                  </div>
-                  <a href="" class="btn btn__entire projects__btn">О проекте</a>
-                  <span class="hashtag projects__hashtag">#fuji</span>
-                </li>
-
-                <li class="projects__item projects__item_huge projects__item_huge_lower projects__item_huge_oblivion">
-                  <div class="projects__upper">
-                    <div class="date projects__date">
-                      <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                        <use href="img/sprite.svg#calendar" />
-                      </svg>
-                      <span class="date__day">20 марта</span>
-                    </div>
-                    <h3 class="projects__heading">Забвение</h3>
-                    <span class="content projects__content">
-                      Играет важную роль в формировании глубокомысленных рассуждений
-                    </span>
-                  </div>
-                  <a href="" class="btn btn__entire projects__btn">О проекте</a>
-                  <span class="hashtag projects__hashtag">#проектзабвение</span>
-                </li>
-
-                <li class="projects__item projects__item_common projects__item_common_upper">
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-1/projects__slide-1.6.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.6_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.6_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-1/projects__slide-1.6.jpg" alt="Проект №6">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Как принято считать, многие известные личности и по сей день остаются уделом либералов...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">16 июня</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#ретушь</span>
-                </li>
-
-                <li class="projects__item projects__item_common projects__item_common_lower">
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-1/projects__slide-1.7.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.7_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-1/projects__slide-1.7_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-1/projects__slide-1.7.jpg" alt="Проект №7">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">С учётом сложившейся международной обстановки, новая модель организационной...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">1 марта</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#портрет</span>
-                </li>
-
-              </ul>
-
-            </div>
-
-            <div class="swiper-slide projects__swiper-slide projects__swiper-slide-2">
-
-              <ul class="projects__list_lower">
-
-                <li class="projects__item projects__item_huge projects__item_huge_upper projects__item_huge_portrait">
-                  <div class="projects__upper">
-                    <div class="date projects__date">
-                      <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                        <use href="img/sprite.svg#calendar" />
-                      </svg>
-                      <span class="date__day">24 февраля</span>
-                    </div>
-                    <h3 class="projects__heading">Спорная точка зрения</h3>
-                    <span class="content projects__content">
-                      Ясность нашей позиции очевидна: убеждённость некоторых оппонентов
-                    </span>
-                  </div>
-                  <a href="" class="btn btn__entire projects__btn">О проекте</a>
-                  <span class="hashtag projects__hashtag">#портрет</span>
-                </li>
-
-                <li class="projects__item projects__item_common projects__item_common_upper">
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-2/projects__slide-2.2.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.2_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.2_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-2/projects__slide-2.2.jpg" alt="Проект №1">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">20 февраля</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#ретушь</span>
-                </li>
-
-                <li class="projects__item projects__item_common projects__item_common_lower">
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-2/projects__slide-2.3.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.3_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.3_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-2/projects__slide-2.3.jpg" alt="Проект №1">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Прежде всего, повышение уровня гражданского сознания говорит о возможностях приоритизации...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">18 февраля</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#портрет</span>
-                </li>
-
-                <li class="projects__item projects__item_huge projects__item_huge_tablet projects__item_huge_lower projects__item_huge_jazz">
-                  <div class="projects__upper">
-                    <div class="date projects__date">
-                      <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                        <use href="img/sprite.svg#calendar" />
-                      </svg>
-                      <span class="date__day">2 февраля</span>
-                    </div>
-                    <h3 class="projects__heading">Задания по разработке своевременного</h3>
-                    <span class="content projects__content">
-                      Повседневная практика показывает, что сложившаяся структура организации играет важную роль
-                    </span>
-                  </div>
-                  <a href="" class="btn btn__entire projects__btn">О проекте</a>
-                  <span class="hashtag projects__hashtag">#fuji</span>
-                </li>
-
-              </ul>
-
-              <ul class="projects__list_upper">
-
-                <li class="projects__item
-                projects__item_common 
-                projects__item_common_desk">
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-2/projects__slide-2.4.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.4_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.4_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-2/projects__slide-2.4.jpg" alt="Проект №1">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Равным образом, сложившаяся структура организации...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">15 февраля</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#пейзаж</span>
-                </li>
-
-                <li class="projects__item projects__item_common">
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-2/projects__slide-2.5.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.5_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.5_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-2/projects__slide-2.5.jpg" alt="Проект №1">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Безусловно, реализация намеченных плановых заданий обеспечивает...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">10 февраля</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#предмет</span>
-                </li>
-
-                <li class="projects__item projects__item_common">
-                  <figure class="projects__figure">
-                    <picture class="projects__img">
-                      <source srcset="img/projects/slide-2/projects__slide-2.6.jpg" media="(min-width: 1700px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.6_1024.jpg" media="(min-width: 577px)">
-                      <source srcset="img/projects/slide-2/projects__slide-2.6_320.jpg" media="(min-width: 320px)">
-                      <img src="img/projects/slide-2/projects__slide-2.6.jpg" alt="Проект №1">
-                    </picture>
-                    <figcaption class="projects__figcaption">
-                      <a href="" class="projects__headline btn__entire">Безусловно, курс на социальный национальный...</a>
-                      <div class="date">
-                        <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                          <use href="img/sprite.svg#calendar" />
-                        </svg>
-                        <span class="projects__day date__day">7 февраля</span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <span class="hashtag projects__hashtag">#пейзаж</span>
-                </li>
-
-                <li class="projects__item projects__item_huge projects__item_huge_desk projects__item_huge_lower projects__item_huge_jazz">
-                  <div class="projects__upper">
-                    <div class="date projects__date">
-                      <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
-                        <use href="img/sprite.svg#calendar" />
-                      </svg>
-                      <span class="date__day">2 февраля</span>
-                    </div>
-                    <h3 class="projects__heading">Задания по разработке своевременного</h3>
-                    <span class="content projects__content">
-                      Повседневная практика показывает, что сложившаяся структура организации играет важную роль
-                    </span>
-                  </div>
-                  <a href="" class="btn btn__entire projects__btn">О проекте</a>
-                  <span class="hashtag projects__hashtag">#fuji</span>
-                </li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-          <div class="swiper-pagination swiper-pagination_desk"></div>
+          <ul class="projects__tabs projects__tabs_mobile">
+            <li class="projects__li">
+              <button type="button" class="projects__tab projects__tab_active" aria-label="Первая вкладка со списком проектов">1</button>
+            </li>
+            <li class="projects__li">
+              <button type="button" class="projects__tab" aria-label="Вторая вкладка со списком проектов">2</button>
+            </li>
+          </ul>
 
         </div>
+
+        <div class="projects__holder projects__holder_active">
+
+          <ul class="projects__list projects__list_upper">
+
+            <li class="projects__item projects__item_common">
+
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-1/projects__slide-1.1.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.1_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.1_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-1/projects__slide-1.1.jpg" alt="Проект №1">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Синтетически, смешаны с не уникальными данными до степени...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">16 июня</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#пейзаж</span>
+
+            </li>
+
+            <li class="projects__item projects__item_common">
+
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-1/projects__slide-1.2.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.2_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.2_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-1/projects__slide-1.2.jpg" alt="Проект №2">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">В своём стремлении улучшить опыт мы упускаем, что явные...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">28 мая</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#портрет</span>
+
+            </li>
+
+            <li class="projects__item projects__item_common">
+
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-1/projects__slide-1.3.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.3_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.3_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-1/projects__slide-1.3.jpg" alt="Проект №3">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Равным образом, высокое качество позиционных...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">14 мая</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#предмет</span>
+
+            </li>
+
+            <li class="projects__item 
+                projects__item_common projects__item_common_tablet">
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-2/projects__slide-2.4.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.4_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.4_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-2/projects__slide-2.4.jpg" alt="Проект №1">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Равным образом, сложившаяся структура организации...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">15 февраля</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#пейзаж</span>
+            </li>
+
+            <li class="projects__item projects__item_huge projects__item_huge_desk projects__item_huge_fuji">
+              <div class="projects__upper">
+                <div class="date projects__date">
+                  <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#calendar" />
+                  </svg>
+                  <span class="date__day">9 апреля</span>
+                </div>
+                <h3 class="projects__heading">Cемантический разбор</h3>
+                <span class="content projects__content">
+                  В рамках спецификации современных стандартов, интерактивные прототипы
+                </span>
+              </div>
+              <a href="" class="btn btn__entire projects__btn">О проекте</a>
+              <span class="hashtag projects__hashtag">#fuji</span>
+            </li>
+
+          </ul>
+
+          <ul class="projects__list projects__list_lower">
+
+            <li class="projects__item projects__item_huge projects__item_huge_upper projects__item_huge_tablet projects__item_huge_fuji">
+              <div class="projects__upper">
+                <div class="date projects__date">
+                  <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#calendar" />
+                  </svg>
+                  <span class="date__day">9 апреля</span>
+                </div>
+                <h3 class="projects__heading">Cемантический разбор</h3>
+                <span class="content projects__content">
+                  В рамках спецификации современных стандартов, интерактивные прототипы
+                </span>
+              </div>
+              <a href="" class="btn btn__entire projects__btn">О проекте</a>
+              <span class="hashtag projects__hashtag">#fuji</span>
+            </li>
+
+            <li class="projects__item projects__item_huge projects__item_huge_lower projects__item_huge_oblivion">
+              <div class="projects__upper">
+                <div class="date projects__date">
+                  <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#calendar" />
+                  </svg>
+                  <span class="date__day">20 марта</span>
+                </div>
+                <h3 class="projects__heading">Забвение</h3>
+                <span class="content projects__content">
+                  Играет важную роль в формировании глубокомысленных рассуждений
+                </span>
+              </div>
+              <a href="" class="btn btn__entire projects__btn">О проекте</a>
+              <span class="hashtag projects__hashtag">#проектзабвение</span>
+            </li>
+
+            <li class="projects__item projects__item_common projects__item_common_upper">
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-1/projects__slide-1.6.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.6_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.6_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-1/projects__slide-1.6.jpg" alt="Проект №6">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Как принято считать, многие известные личности и по сей день остаются уделом либералов...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">16 июня</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#ретушь</span>
+            </li>
+
+            <li class="projects__item projects__item_common projects__item_common_lower">
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-1/projects__slide-1.7.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.7_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-1/projects__slide-1.7_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-1/projects__slide-1.7.jpg" alt="Проект №7">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">С учётом сложившейся международной обстановки, новая модель организационной...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">1 марта</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#портрет</span>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="projects__holder">
+
+          <ul class="projects__list_lower">
+
+            <li class="projects__item projects__item_huge projects__item_huge_upper projects__item_huge_portrait">
+              <div class="projects__upper">
+                <div class="date projects__date">
+                  <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#calendar" />
+                  </svg>
+                  <span class="date__day">24 февраля</span>
+                </div>
+                <h3 class="projects__heading">Спорная точка зрения</h3>
+                <span class="content projects__content">
+                  Ясность нашей позиции очевидна: убеждённость некоторых оппонентов
+                </span>
+              </div>
+              <a href="" class="btn btn__entire projects__btn">О проекте</a>
+              <span class="hashtag projects__hashtag">#портрет</span>
+            </li>
+
+            <li class="projects__item projects__item_common projects__item_common_upper">
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-2/projects__slide-2.2.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.2_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.2_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-2/projects__slide-2.2.jpg" alt="Проект №1">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">20 февраля</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#ретушь</span>
+            </li>
+
+            <li class="projects__item projects__item_common projects__item_common_lower">
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-2/projects__slide-2.3.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.3_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.3_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-2/projects__slide-2.3.jpg" alt="Проект №1">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Прежде всего, повышение уровня гражданского сознания говорит о возможностях приоритизации...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">18 февраля</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#портрет</span>
+            </li>
+
+            <li class="projects__item projects__item_huge projects__item_huge_tablet projects__item_huge_lower projects__item_huge_jazz">
+              <div class="projects__upper">
+                <div class="date projects__date">
+                  <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#calendar" />
+                  </svg>
+                  <span class="date__day">2 февраля</span>
+                </div>
+                <h3 class="projects__heading">Задания по разработке своевременного</h3>
+                <span class="content projects__content">
+                  Повседневная практика показывает, что сложившаяся структура организации играет важную роль
+                </span>
+              </div>
+              <a href="" class="btn btn__entire projects__btn">О проекте</a>
+              <span class="hashtag projects__hashtag">#fuji</span>
+            </li>
+
+          </ul>
+
+          <ul class="projects__list_upper">
+
+            <li class="projects__item
+                projects__item_common 
+                projects__item_common_desk">
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-2/projects__slide-2.4.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.4_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.4_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-2/projects__slide-2.4.jpg" alt="Проект №1">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Равным образом, сложившаяся структура организации...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">15 февраля</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#пейзаж</span>
+            </li>
+
+            <li class="projects__item projects__item_common">
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-2/projects__slide-2.5.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.5_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.5_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-2/projects__slide-2.5.jpg" alt="Проект №1">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Безусловно, реализация намеченных плановых заданий обеспечивает...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">10 февраля</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#предмет</span>
+            </li>
+
+            <li class="projects__item projects__item_common">
+              <figure class="projects__figure">
+                <picture class="projects__img">
+                  <source srcset="img/projects/slide-2/projects__slide-2.6.jpg" media="(min-width: 1700px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.6_1024.jpg" media="(min-width: 577px)">
+                  <source srcset="img/projects/slide-2/projects__slide-2.6_320.jpg" media="(min-width: 320px)">
+                  <img src="img/projects/slide-2/projects__slide-2.6.jpg" alt="Проект №1">
+                </picture>
+                <figcaption class="projects__figcaption">
+                  <a href="" class="projects__headline btn__entire">Безусловно, курс на социальный национальный...</a>
+                  <div class="date">
+                    <svg class="date__calendar projects__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#calendar" />
+                    </svg>
+                    <span class="projects__day date__day">7 февраля</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <span class="hashtag projects__hashtag">#пейзаж</span>
+            </li>
+
+            <li class="projects__item projects__item_huge projects__item_huge_desk projects__item_huge_lower projects__item_huge_jazz">
+              <div class="projects__upper">
+                <div class="date projects__date">
+                  <svg class="date__calendar" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#calendar" />
+                  </svg>
+                  <span class="date__day">2 февраля</span>
+                </div>
+                <h3 class="projects__heading">Задания по разработке своевременного</h3>
+                <span class="content projects__content">
+                  Повседневная практика показывает, что сложившаяся структура организации играет важную роль
+                </span>
+              </div>
+              <a href="" class="btn btn__entire projects__btn">О проекте</a>
+              <span class="hashtag projects__hashtag">#fuji</span>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="projects__tabs projects__tabs_desk">
+          <li class="projects__li">
+            <button type="button" class="projects__tab projects__tab_active" aria-label="Первая вкладка со списком проектов">1</button>
+          </li>
+          <li class="projects__li">
+            <button type="button" class="projects__tab" aria-label="Вторая вкладка со списком проектов">2</button>
+          </li>
+        </ul>
 
       </div>
     </section>
@@ -689,9 +696,9 @@
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
                     <span class="services__upper">
-                      <span class="services__heading">
+                      <strong class="services__heading">
                         Высокий уровень вовлечения
-                      </span>
+                      </strong>
                       <span class="content services__content">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</span>
                     </span>
                     <span class="services__more">
@@ -717,9 +724,9 @@
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
                     <span class="services__upper">
-                      <span class="services__heading">
+                      <strong class="services__heading">
                         Высокий уровень вовлечения
-                      </span>
+                      </strong>
                       <span class="content services__content">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством...</span>
                     </span>
                     <span class="services__more">
@@ -745,9 +752,9 @@
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
                     <span class="services__upper">
-                      <span class="services__heading">
+                      <strong class="services__heading">
                         Диаграммы связей
-                      </span>
+                      </strong>
                       <span class="content services__content">Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий влечет за собой процесс.</span>
                     </span>
                     <span class="services__more">
@@ -773,9 +780,9 @@
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
                     <span class="services__upper">
-                      <span class="services__heading">
+                      <strong class="services__heading">
                         Высокотехнологичная концепция
-                      </span>
+                      </strong>
                       <span class="content services__content">В частности, убеждённость некоторых оппонентов способствует подготовке и реализации анализа существующих паттернов.</span>
                     </span>
                     <span class="services__more">
@@ -801,9 +808,9 @@
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
                     <span class="services__upper">
-                      <span class="services__heading">
+                      <strong class="services__heading">
                         Высокотехнологичная концепция
-                      </span>
+                      </strong>
                       <span class="content services__content">В частности, убеждённость некоторых оппонентов способствует подготовке и реализации анализа существующих...</span>
                     </span>
                     <span class="services__more">
@@ -887,9 +894,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Принимая во внимание показатели
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -911,9 +918,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Таким образом, выбранный нами...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -935,9 +942,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Также как высокое качество...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -959,9 +966,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Безусловно, семантический разбор...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -983,9 +990,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="btn__entire services__link">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Внезапно, предприниматели в интернете...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -1007,9 +1014,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Есть над чем подумать: активные...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -1031,9 +1038,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Сделанные на базе аналитики выводы...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -1055,9 +1062,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Как принято считать, сторонники...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -1079,9 +1086,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Задача организации, в особенности...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -1103,9 +1110,9 @@
                 </picture>
                 <figcaption class="services__figcaption">
                   <a href="" class="services__link btn__entire">
-                    <span class="services__heading">
+                    <strong class="services__heading">
                       Активно развивающиеся страны...
-                    </span>
+                    </strong>
                     <span class="services__more">
                       Подробнее
                       <svg class="services__arrow" width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
@@ -1123,13 +1130,13 @@
 
         <div class="services__right">
 
-          <aside class="services__sidebar">
+          <article class="services__article">
             <strong class="services__action">Акция!</strong>
             <span class="services__date">Только в июне</span>
             <img class="services__sale" src="img/sprite.svg#sale" alt="Скидка 20%">
             <span class="content services__desc">1,5 часа портретной съемки + ретушь 10 снимков</span>
             <a href="" class="btn btn_orange btn__entire">Узнать больше</a>
-          </aside>
+          </article>
 
           <h3 class="title services__title services__title_right">Выполненные работы</h3>
 
@@ -1594,7 +1601,7 @@
 
         <div class="contacts__right">
 
-          <span class="caption contacts__caption">Оставить заявку</span>
+          <strong class="caption contacts__caption">Оставить заявку</strong>
 
           <span class="content contacts__content">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия</span>
 
