@@ -138,6 +138,7 @@ const images = () => {
     'src/img/**/*.jpg',
     'src/img/**/*.png',
     'src/img/**/*.jpeg',
+    'src/img/**/*.svg',
   ])
     .pipe(dest('dist/img'))
     .pipe(browserSync.stream())
