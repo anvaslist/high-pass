@@ -13,10 +13,11 @@
   }
   &__left {
     position: relative;
-    max-height: 460px;
-    min-height: 460px;
+    max-height: 465px;
+    min-height: 465px;
     max-width: 100%;
     grid-column: span 2;
+    padding-top: 7px;
   }
   &__map {
     height: 100%;
@@ -194,6 +195,7 @@
 
 @media (max-width: 900px) {
   .contacts {
+    padding-bottom: 72px;
     &__container {
       grid-template-columns: repeat(3, 1fr);
     }

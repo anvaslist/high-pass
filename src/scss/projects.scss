@@ -60,10 +60,10 @@
   }
   &__holder {
     display: none;
-    margin-bottom: 41px;
+    margin-bottom: 45px;
     &_active {
       display: grid;
-      @include adaptiveValue("row-gap", 25, 15, 1920, 1024, 0);
+      @include adaptiveValue("row-gap", 31, 15, 1920, 1024, 0);
       animation: showTab 0.4s ease-in-out;
     }
   }
@@ -80,14 +80,14 @@
       grid-template-columns: repeat(6, 1fr);
       .projects__item_common {
         .projects__headline {
-          margin-bottom: 14px;
+          margin-bottom: 10px;
         }
       }
     }
     &_lower {
       .projects__item_common {
         .projects__headline {
-          margin-bottom: 19px;
+          margin-bottom: 14px;
         }
       }
       grid-template-columns: repeat(4, 1fr);
@@ -96,7 +96,7 @@
   &__figcaption {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-grow: 1;
   }
   &__item {
@@ -115,10 +115,12 @@
       flex-direction: column;
       justify-content: space-between;
       padding-top: 22px;
-      padding-bottom: 35px;
+      padding-bottom: 34px;
+      // padding-bottom: 35px;
       padding-left: 30px;
       min-height: 300px;
-      @include adaptiveValue("padding-right", 303, 210, 1920, 1024, 0);
+      // max-height: 300px;
+      @include adaptiveValue("padding-right", 305, 210, 1920, 1024, 0);
       &_fuji,
       &_jazz {
         grid-column: span 3;
@@ -158,7 +160,7 @@
     }
   }
   &__img {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     img {
       max-width: 100%;
     }
@@ -220,7 +222,7 @@
   .projects {
     &__holder {
       &_active {
-        @include adaptiveValue("row-gap", 21, 15, 1024, 768, 0);
+        @include adaptiveValue("row-gap", 25, 15, 1024, 768, 0);
       }
     }
     &__list {
@@ -236,8 +238,14 @@
           minmax(218px, 342px) minmax(218px, 1fr) minmax(218px, 342px)
         );
         @include adaptiveValue("column-gap", 30, 15, 1024, 768, 0);
-        @include adaptiveValue("row-gap", 22, 15, 1024, 768, 0);
+        @include adaptiveValue("row-gap", 26, 15, 1024, 768, 0);
       }
+    }
+    &__figcaption {
+      justify-content: space-between;
+    }
+    &__img {
+      margin-bottom: 18px;
     }
     &__item {
       &_common {
@@ -302,7 +310,8 @@
     }
     &__holder {
       &_active {
-        @include adaptiveValue("row-gap", 21, 15, 768, 576, 0);
+        @include adaptiveValue("row-gap", 24, 15, 768, 576, 0);
+        margin-bottom: 47px;
       }
     }
     &__list {
@@ -373,7 +382,10 @@
       }
     }
     &__holder {
-      row-gap: 26px;
+      &_active {
+        margin-bottom: 21px;
+        row-gap: 26px;
+      }
     }
     &__tabs {
       &_mobile {

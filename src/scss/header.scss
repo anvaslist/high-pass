@@ -38,9 +38,9 @@
   &__submenu-container {
     justify-content: space-between;
   }
-  // &__logo {
-  //   @include adaptiveValue("margin-right", 139, 40, 1920, 1024, 0);
-  // }
+  &__logo {
+    @include adaptiveValue("margin-right", 48, 15, 1920, 1024, 0);
+  }
   &__nav {
     &_tablet {
       display: none;
