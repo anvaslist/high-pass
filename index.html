@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font">
-  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/TTFirsNeue-Bold.woff2" as="font">
-  <link rel="preload" href="fonts/TTFirsNeue-Medium.woff2" as="font">
-  <link rel="preload" href="fonts/TTFirsNeue-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/TTFirsNeue-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/TTFirsNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/TTFirsNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="shortcut icon" href="img/icon.svg" type="image/svg">
   <link rel="stylesheet" href="css/style.min.css">
   <title>High Pass</title>
@@ -1433,7 +1433,7 @@
               <source srcset="img/masters/masters-1_1024.webp" media="(min-width: 769px)">
               <source srcset="img/masters/masters-1_768.webp" media="(min-width: 451px)">
               <source srcset="img/masters/masters-1_320.webp" media="(min-width: 320px)">
-              <img src="img/masters/masters-1.webp" alt="Мастер-класс №1">
+              <img src="img/masters/masters-1.jpg" alt="Мастер-класс №1">
             </picture>
             <figcaption class="masters__figcaption">
               <div class="date masters__date">
@@ -1465,7 +1465,7 @@
               <picture class="masters__thumb">
                 <source srcset="img/masters/masters-2.webp" media="(min-width: 1025px)">
                 <source srcset="img/masters/masters-2_1024.webp" media="(min-width: 320px)">
-                <img src="img/masters/masters-2.webp" alt="Мастер-класс №2">
+                <img src="img/masters/masters-2.jpg" alt="Мастер-класс №2">
               </picture>
               <figcaption>
                 <div class="date">
@@ -1488,7 +1488,7 @@
               <picture class="masters__thumb">
                 <source srcset="img/masters/masters-3.webp" media="(min-width: 1025px)">
                 <source srcset="img/masters/masters-3_1024.webp" media="(min-width: 320px)">
-                <img src="img/masters/masters-3.webp" alt="Мастер-класс №3">
+                <img src="img/masters/masters-3.jpg" alt="Мастер-класс №3">
               </picture>
               <figcaption>
                 <div class="date">
@@ -1511,7 +1511,7 @@
               <picture class="masters__thumb">
                 <source srcset="img/masters/masters-4.webp" media="(min-width: 1025px)">
                 <source srcset="img/masters/masters-4_1024.webp" media="(min-width: 320px)">
-                <img src="img/masters/masters-4.webp" alt="Мастер-класс №4">
+                <img src="img/masters/masters-4.jpg" alt="Мастер-класс №4">
               </picture>
               <figcaption>
                 <div class="date">
@@ -1534,7 +1534,7 @@
               <picture class="masters__thumb">
                 <source srcset="img/masters/masters-5.webp" media="(min-width: 1025px)">
                 <source srcset="img/masters/masters-5_1024.webp" media="(min-width: 320px)">
-                <img src="img/masters/masters-5.webp" alt="Мастер-класс №5">
+                <img src="img/masters/masters-5.jpg" alt="Мастер-класс №5">
               </picture>
               <figcaption>
                 <div class="date">
@@ -1564,7 +1564,7 @@
         <h2 class="title contacts__title">Контакты</h2>
 
         <div class="contacts__left">
-          <div id="map" class="map contacts__map"></div>
+          <div id="map" class="map contacts__map" aria-label="Открыть адрес по клику на карту"></div>
 
           <div class="contacts__desc">
 
@@ -1587,9 +1587,11 @@
               +7 (495) 42-423-532
             </a>
 
-            <svg class="contacts__close" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <use href="img/sprite.svg#close" />
-            </svg>
+            <button class="contacts__close" type="button" aria-label="Кнопка закрытия адреса">
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <use href="img/sprite.svg#close" />
+              </svg>
+            </button>
 
           </div>
         </div>
