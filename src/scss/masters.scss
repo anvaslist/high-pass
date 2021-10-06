@@ -80,6 +80,7 @@
 
 @media (max-width: 1024px) {
   .masters {
+    padding-bottom: 68px;
     &__container {
       grid-template-columns: 1fr;
     }
@@ -121,7 +122,7 @@
       }
     }
     &__parag {
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
     &__common {
       @include adaptiveValue("column-gap", 30, 15, 768, 576, 0);
@@ -144,12 +145,15 @@
     padding-top: 23px;
     padding-bottom: 60px;
     &__main {
-      margin-bottom: 44px;
+      margin-bottom: 43px;
       .masters__figure {
         grid-template-columns: 1fr;
         column-gap: 0px;
         row-gap: 16px;
       }
+    }
+    &__parag {
+      margin-bottom: 19px;
     }
     &__common {
       grid-template-columns: 1fr;

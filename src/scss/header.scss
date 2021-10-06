@@ -45,9 +45,6 @@
     &_tablet {
       display: none;
     }
-    // &_desk {
-    //   @include adaptiveValue("margin-right", 88, 40, 1920, 1024, 0);
-    // }
   }
   &__tablet-block {
     display: none;
@@ -295,8 +292,15 @@
         padding-bottom: 21px;
       }
     }
+    &__submenu {
+      &-container {
+        padding-top: 16px;
+      }
+    }
     &__tel {
       font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
       &_desk {
         display: flex;
       }

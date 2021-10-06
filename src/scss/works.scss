@@ -16,7 +16,7 @@
     @include adaptiveValue("padding-right", 145, 11, 1920, 1024, 0);
     @include adaptiveValue("padding-bottom", 60, 30, 1920, 1024, 0);
     @include adaptiveValue("padding-left", 60, 30, 1920, 1024, 0);
-    background: url(../img/works/works__event.jpg) center / cover no-repeat;
+    background: url(../img/works/works__event.webp) center / cover no-repeat;
   }
   &__hashtag {
     align-self: flex-start;
@@ -66,7 +66,7 @@
 @media (max-width: 1024px) {
   .works {
     &__event {
-      background: url(../img/works/works__event_1024.jpg) center / cover
+      background: url(../img/works/works__event_1024.webp) center / cover
         no-repeat;
       @include adaptiveValue("padding-top", 428, 280, 1024, 768, 0);
       padding-left: 30px;
@@ -86,7 +86,7 @@
   .works {
     padding-top: 19px;
     &__event {
-      background: url(../img/works/works__event_768.jpg) center / cover
+      background: url(../img/works/works__event_768.webp) center / cover
         no-repeat;
       @include adaptiveValue("padding-top", 226, 115, 768, 576, 0);
       @include adaptiveValue("padding-right", 73, 30, 768, 576, 0);
@@ -110,7 +110,7 @@
   .works {
     &__container {
       grid-template-columns: 1fr;
-      row-gap: 34px;
+      row-gap: 33px;
     }
     &__example {
       img {
@@ -129,9 +129,9 @@
     //   row-gap: 34px;
     // }
     &__event {
-      background: url(../img/works/works__event_320.jpg) center / cover
+      background: url(../img/works/works__event_320.webp) center / cover
         no-repeat;
-      padding-top: 234px;
+      padding-top: 236px;
       padding-right: 30px;
     }
     &__organizer {
@@ -143,6 +143,7 @@
       font-size: 24px;
       line-height: 26px;
       margin-bottom: 14px;
+      padding-right: 49px;
     }
     &__heading {
       font-size: 18px;

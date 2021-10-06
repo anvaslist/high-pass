@@ -140,6 +140,15 @@ const images = () => {
     'src/img/**/*.jpeg',
     'src/img/**/*.svg',
   ])
+    .pipe(webp({
+      quality: 75,
+    }))
+    .pipe(dest('dist/img'))
+    .pipe(src([
+      'src/img/**/*.jpg',
+      'src/img/**/*.png',
+      'src/img/**/*.jpeg',
+    ]))
     .pipe(dest('dist/img'))
     .pipe(browserSync.stream())
 }
