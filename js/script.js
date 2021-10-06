@@ -33,7 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
   aboutform.addEventListener('submit', checkInpVal);
 
   // карта
-  ymaps.ready(init);
+  // lazyload для яндекс-карты
+  function showMap() {
+    const mapWrap = document.querySelector('.contacts__left');
+    if (mapWrap.getBoundingClientRect().top - document.documentElement.clientHeight < 0) {
+      ymaps.ready(init);
+      this.removeEventListener('scroll', showMap);
+    }
+  }
+  window.addEventListener('scroll', showMap);
   function init() {
     // Создание карты.
     const myMap = new ymaps.Map("map", {

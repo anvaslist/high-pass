@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // lazyload для яндекс-карты
   function showMap() {
     const mapWrap = document.querySelector('.contacts__left');
-    if (mapWrap.offsetTop - mapWrap.clientHeight <= document.documentElement.scrollTop) {
+    if (mapWrap.getBoundingClientRect().top - document.documentElement.clientHeight < 0) {
       ymaps.ready(init);
       this.removeEventListener('scroll', showMap);
     }
